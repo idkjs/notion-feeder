@@ -1,0 +1,21 @@
+{
+  "name": "notion-feed-reader",
+  "version": "1.0.0",
+  "sources": [
+    {
+      "dir": "src",
+      "subdirs": true
+    }
+  ],
+  "package-specs": {
+    "module": "commonjs",
+    "in-source": true
+  },
+  "suffix": ".bs.js",
+  "bs-dev-dependencies": [
+    "@glennsl/bs-jest"
+  ],
+  "warnings": {
+    "error": "+101"
+  }
+}

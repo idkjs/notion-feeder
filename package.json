@@ -12,6 +12,11 @@
     "javascript"
   ],
   "scripts": {
+    "clean": "rescript clean",
+    "build:res": "rescript build",
+    "watch": "rescript build -w",
+    "test:watch": "jest --watchAll",
+    "test": "jest",
     "develop": "webpack --watch",
     "build": "webpack",
     "build-prod": "webpack --env mode='production'",
@@ -29,6 +34,7 @@
   "devDependencies": {
     "@babel/core": "^7.17.8",
     "@babel/preset-env": "^7.16.4",
+    "@glennsl/bs-jest": "^0.7.0",
     "babel-loader": "^8.2.3",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
@@ -38,6 +44,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-webpack-plugin": "^3.1.1",
     "prettier": "^2.6.0",
+    "rescript": "^9.1.4",
     "webpack": "^5.70.0",
     "webpack-cli": "^4.9.2"
   },
