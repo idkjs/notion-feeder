@@ -7,7 +7,7 @@ type t = {
 }
 
 @boxed
-type configureOpts = {auth: string}
+type configureOpts = {auth: string,logLevel:LogLevel.t}
 
 @module("@notionhq/client") @new
 external make: configureOpts => t = "Client"

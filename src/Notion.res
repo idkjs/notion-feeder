@@ -7,6 +7,11 @@ let getNewFeedItemsFrom = (feedUrl)=> {
       None
     }
   }
+  let _ = switch (rss) {
+  | Some(rss) => Js.log2("rss: ",rss)|>Js.Promise.resolve
+  | None => Js.log("None")|>Js.Promise.resolve
+  }
+  // Js.log("rss: " ++ rss)
 // }
   // let rss;
   // try {
@@ -16,9 +21,10 @@ let getNewFeedItemsFrom = (feedUrl)=> {
   //   return [];
   // }
   let todaysDate = Js_date.getTime(Js.Date.make()) /. 1000.;
-  rss.items.filter((item) => {
-    let blogPublishedDate = Js_date.fromString(item.pubDate).getTime() / 1000;
-    let { diffInDays } = timeDifference(todaysDate, blogPublishedDate);
-     diffInDays === 0;
-  });
+  // rss.items.filter((item) => {
+  //   let blogPublishedDate = Js_date.fromString(item.pubDate).getTime() / 1000;
+  //   let { diffInDays } = timeDifference(todaysDate, blogPublishedDate);
+  //    diffInDays === 0;
+  // });
+  todaysDate
 }
