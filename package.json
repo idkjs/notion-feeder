@@ -20,7 +20,9 @@
     "develop": "webpack --watch",
     "build": "webpack",
     "build-prod": "webpack --env mode='production'",
-    "feed": "node dist/index.js"
+    "feed": "node dist/index.js",
+    "feedres": "node src/Index.bs.js",
+    "format": "rescript format -all"
   },
   "author": "Ravgeet Dhillon <ravgeetdhillon@gmail.com>",
   "license": "MIT",

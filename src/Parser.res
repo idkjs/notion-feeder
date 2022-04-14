@@ -64,8 +64,8 @@ let jsonToNotionBlocks = markdownContent => {
   markdownToBlocks(markdownContent)
 }
 
-@genType
-let htmlToNotionBlocks = htmlContent => {
+// @genType
+let htmlToNotionBlocks:'a =>array<MarkdownToBlocks.block> = (htmlContent: 'a) => {
   let markdownJson = htmlToMarkdownJSON(htmlContent)
   jsonToNotionBlocks(markdownJson)
 }

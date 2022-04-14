@@ -25,7 +25,7 @@ module.exports = (env) => {
       alias: {
         src: path.resolve(__dirname, 'src'),
       },
-      extensions: ['.js'],
+      extensions: ['.bs.js'],
     },
     optimization: {
       minimize: false,

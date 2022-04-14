@@ -1,7 +1,11 @@
+exception PagesCreateError(string)
 type pagePropsArgs
 @obj
 external pagePropsArgs: (~parent: 'a=?, ~properties: 'b=?, unit) => pagePropsArgs = ""
 
+type createOpts
+@obj
+external createOpts: (~database_id: string, ~filter: 'b, unit) => createOpts = ""
 type tags = {
   id: string,
   type_: string,
@@ -19,7 +23,7 @@ type properties = {
   emptyString: emptyString,
 }
 
-type rec createPageResponse = {
+type rec pageResponse = {
   @as("object")
   object_: string,
   id: string,
@@ -60,8 +64,22 @@ and objectId = {
 //   getPagePropertyQueryParameters,
 // );
 type getPagePropertyResponse
+type updateDatabaseResponse
+
+type updatePageParameters
+@obj
+external updatePageParameters: (
+  ~page_id: 'a=?,
+  ~archived: bool=?,
+  ~icon: 'a=?,
+  ~properties: 'b=?,
+  ~cover: 'b=?,
+  unit,
+) => updatePageParameters = ""
+
 type t = {
-  create: pagePropsArgs => Js.Promise.t<createPageResponse>,
+  create: pagePropsArgs => Js.Promise.t<pageResponse>,
+  update: updatePageParameters => Js.Promise.t<pageResponse>,
   //   retrieve:
   //     withAuth(getPagePropertyQueryParameters) =>
   //     Js.Promise.t(getPagePropertyResponse),

@@ -16,6 +16,7 @@
     "@glennsl/bs-jest"
   ],
   "warnings": {
+    "number": "-109-30-27",
     "error": "+101"
   }
 }

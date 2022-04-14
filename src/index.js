@@ -10,6 +10,8 @@ async function index() {
 
   for (let i = 0; i < feedItems.length; i++) {
     const item = feedItems[i];
+    console.log('item');
+    console.log(item);
     const notionItem = {
       title: item.title,
       link: item.link,
